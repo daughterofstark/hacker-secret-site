@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome</title>
+  <style>
+    body { font-family: monospace; background-color: #111; color: #eee; padding: 2rem; }
+    .hidden-note { display: none; }
+    .invisible { color: #111; }
+  </style>
+</head>
+<body>
+  <h1>Welcome to My Page</h1>
+  <p>This is just a boring webpage.</p>
+
+  <!-- Hidden meme link via tiny pixel -->
+  <a href="https://imgur.com/gallery/cop-TurCaQb" style="position:absolute; left:5px; top:5px; width:1px; height:1px; overflow:hidden;">.</a>
+
+  <!-- Hidden message in source code -->
+  <!-- Hey you! You found the first secret. Keep digging... -->
+
+  <!-- Hidden text in background-color -->
+  <p class="invisible">You're getting warmer...</p>
+
+  <!-- Hidden note shown on key combo -->
+  <p id="note" class="hidden-note">You’ve unlocked the hacker message: "The cake is a lie."</p>
+
+  <script>
+    // Console message
+    console.log("👋 Hello curious friend. You seem to like digging.");
+
+    // Reveal note on key combo (e.g. Ctrl+H)
+    document.addEventListener('keydown', function(e) {
+      if (e.ctrlKey && e.key === 'h') {
+        document.getElementById('note').style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>
